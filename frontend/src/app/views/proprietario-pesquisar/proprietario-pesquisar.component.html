@@ -1,0 +1,42 @@
+<!-- Cabeçalho -->
+
+<div class="card">
+  <div class="card-header">
+    <i class="bi bi-table"></i> &nbsp; Pesquisa de Proprietários
+    <button class="btn btn-primary btn-sm" (click)="cadastrarProprietario()" style="margin: 10px 50px 5px;">
+      Cadastrar Proprietário
+    </button>
+  </div>
+
+  <!-- tabela -->
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>ID imóvel</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let proprietario of proprietarios">
+          <td>
+            {{ proprietario.id }}
+          </td>
+          <td>
+            {{ proprietario.nome }}
+          </td>
+          <td>
+            {{ proprietario.imovelId }}
+          </td>
+          <td>
+            <button class="btn btn-primary btn-sm" routerLink="/proprietario/editar/{{proprietario.id}}">
+              <i class="bi bi-pencil-square"> Editar</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

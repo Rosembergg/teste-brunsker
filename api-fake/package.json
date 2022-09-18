@@ -1,0 +1,14 @@
+{
+  "name": "api-fake",
+  "version": "1.0.0",
+  "description": "Api fake para testes candidatos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Matheus",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}

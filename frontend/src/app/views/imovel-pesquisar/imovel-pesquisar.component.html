@@ -1,0 +1,54 @@
+<!-- Cabeçalho -->
+
+<div class="card">
+    <div class="card-header">
+      <i class="bi bi-table"></i> &nbsp; Pesquisa de Imóveis
+      <button class="btn btn-primary btn-sm" (click)="cadastrarImovel()" style="margin: 10px 50px 5px;">
+        Cadastrar Imóveis
+      </button>
+    </div>
+  
+    <!-- tabela -->
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Data Anúncio</th>
+            <th>ID Proprietário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let imovel of imoveis">
+            <td>
+              {{ imovel.id }}
+            </td>
+            <td>
+              {{ imovel.nome }}
+            </td>
+            <td>
+              {{ imovel.tipo }}
+            </td>
+            <td>
+              R$ {{ imovel.valor }}
+            </td>
+            <td>
+              {{ imovel.dataAnuncio }}
+            </td>
+            <td>
+              {{ imovel.proprietarioId }}
+            </td>
+            <td>
+              <button class="btn btn-primary btn-sm" routerLink="/imovel/editar/{{imovel.id}}">
+                <i class="bi bi-pencil-square"> Editar</i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
